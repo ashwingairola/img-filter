@@ -1,0 +1,31 @@
+<h2>Select an image file</h2>
+<input
+  type="file"
+  [formControl]="fileCtrl"
+  (change)="onFileSelect($event.target.files[0])"
+/>
+<ng-container *ngIf="image">
+  <input
+    type="range"
+    (change)="onFilterChange('brightness', $event.target.value)"
+  />
+  <input
+    type="range"
+    (change)="onFilterChange('contrast', $event.target.value)"
+  />
+  <input
+    type="range"
+    (change)="onFilterChange('saturate', $event.target.value)"
+  />
+  <input
+    type="range"
+    (change)="onFilterChange('grayscale', $event.target.value)"
+  />
+  <input
+    type="range"
+    (change)="onFilterChange('invert', $event.target.value)"
+  />
+  <input type="range" (change)="onFilterChange('sepia', $event.target.value)" />
+</ng-container>
+
+<canvas #imgCanvas></canvas>
