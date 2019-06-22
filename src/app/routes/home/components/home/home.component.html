@@ -5,6 +5,22 @@
   (change)="onFileSelect($event.target.files[0])"
 />
 <ng-container *ngIf="image">
+  <app-btn-change
+    [value]="100"
+    [unit]="'%'"
+    [minValue]="0"
+    [change]="10"
+    [label]="'Brightness'"
+    (valueChange)="onFilterChange('brightness', $event)"
+  ></app-btn-change>
+  <app-btn-change
+    [value]="100"
+    [unit]="'%'"
+    [minValue]="0"
+    [change]="10"
+    [label]="'Contrast'"
+    (valueChange)="onFilterChange('contrast', $event)"
+  ></app-btn-change>
   <input
     type="range"
     (change)="onFilterChange('brightness', $event.target.value)"
@@ -26,6 +42,8 @@
     (change)="onFilterChange('invert', $event.target.value)"
   />
   <input type="range" (change)="onFilterChange('sepia', $event.target.value)" />
+
+  <button (click)="onReset()"></button>
 </ng-container>
 
 <canvas #imgCanvas></canvas>

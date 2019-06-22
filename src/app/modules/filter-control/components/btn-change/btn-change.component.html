@@ -1,0 +1,7 @@
+<div class="inline-block">
+  <div class="flex flex-between">
+    <button (click)="decreaseValue()">-</button>
+    <span>{{ label + ' ' + value + (unit ? ' ' + unit : '') }}</span>
+    <button (click)="increaseValue()">+</button>
+  </div>
+</div>

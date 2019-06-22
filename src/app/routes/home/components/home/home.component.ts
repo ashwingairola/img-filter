@@ -61,4 +61,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.picfx.applyImgFilter(this.image, filter, value);
     console.log(this.imgCanvas.nativeElement.getContext('2d').filter);
   }
+
+  onReset() {
+    this.picfx.resetImgFilters(this.image);
+  }
 }

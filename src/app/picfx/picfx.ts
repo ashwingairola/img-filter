@@ -35,6 +35,16 @@ export class PicFX {
 
     this.filtersMap.set(filter, finalValue);
     this.refreshFilters();
+    this.drawImg(image, dx, dy);
+  }
+
+  resetImgFilters(image: CanvasImageSource) {
+    this.filtersMap.clear();
+    this.refreshFilters();
+    this.drawImg(image);
+  }
+
+  private drawImg(image: CanvasImageSource, dx?: number, dy?: number) {
     this.canvasContext.filter = this.filterString;
     this.canvasContext.drawImage(image, dx ? dx : 0, dy ? dy : 0);
   }
