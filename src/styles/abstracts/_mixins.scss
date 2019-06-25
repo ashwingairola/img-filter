@@ -1,0 +1,5 @@
+@import './vars';
+
+@mixin width-balance {
+  max-width: $width-max;
+}

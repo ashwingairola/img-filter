@@ -1,1 +1,141 @@
 @import 'base/base';
+@import 'base/typography';
+@import 'abstracts/mixins';
+@import 'abstracts/vars';
+
+.container {
+  @include width-balance;
+}
+
+.center-horizontal {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.color-primary {
+  background-color: $color-primary;
+}
+
+// Margin
+.margin-top-xs {
+  margin-top: $size-xs;
+}
+
+.margin-bottom-xs {
+  margin-bottom: $size-xs;
+}
+
+.margin-left-xs {
+  margin-left: $size-xs;
+}
+
+.margin-right-xs {
+  margin-right: $size-xs;
+}
+
+.margin-top-s {
+  margin-top: $size-s;
+}
+
+.margin-bottom-s {
+  margin-bottom: $size-s;
+}
+
+.margin-left-s {
+  margin-left: $size-s;
+}
+
+.margin-right-s {
+  margin-right: $size-s;
+}
+
+.margin-top-m {
+  margin-top: $size-m;
+}
+
+.margin-bottom-m {
+  margin-bottom: $size-m;
+}
+
+.margin-left-m {
+  margin-left: $size-m;
+}
+
+.margin-right-m {
+  margin-right: $size-m;
+}
+
+.margin-top-l {
+  margin-top: $size-l;
+}
+
+.margin-bottom-l {
+  margin-bottom: $size-l;
+}
+
+.margin-left-l {
+  margin-left: $size-l;
+}
+
+.margin-right-l {
+  margin-right: $size-l;
+}
+
+// Padding
+.padding-top-xs {
+  padding-top: $size-xs;
+}
+
+.padding-bottom-xs {
+  padding-bottom: $size-xs;
+}
+
+.padding-left-xs {
+  padding-left: $size-xs;
+}
+
+.padding-right-xs {
+  padding-right: $size-xs;
+}
+
+.padding-top-s {
+  padding-top: $size-s;
+}
+
+.padding-bottom-s {
+  padding-bottom: $size-s;
+}
+
+.padding-left-s {
+  padding-left: $size-s;
+}
+
+.padding-right-s {
+  padding-right: $size-s;
+}
+
+.padding-top-m {
+  padding-top: $size-m;
+}
+
+.padding-bottom-m {
+  padding-bottom: $size-m;
+}
+
+.padding-left-m {
+  padding-left: $size-m;
+}
+
+.padding-right-m {
+  padding-right: $size-m;
+}
+
+// Display
+.block {
+  display: block;
+}
+
+// Width
+.width-1-1 {
+  width: 100%;
+}

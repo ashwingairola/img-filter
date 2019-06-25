@@ -21,6 +21,14 @@
     [label]="'Contrast'"
     (valueChange)="onFilterChange('contrast', $event)"
   ></app-btn-change>
+  <app-btn-change
+    [value]="0"
+    [unit]="'%'"
+    [minValue]="0"
+    [change]="10"
+    [label]="'Sepia'"
+    (valueChange)="onFilterChange('sepia', $event)"
+  ></app-btn-change>
   <input
     type="range"
     (change)="onFilterChange('brightness', $event.target.value)"
@@ -46,4 +54,6 @@
   <button (click)="onReset()"></button>
 </ng-container>
 
-<canvas #imgCanvas></canvas>
+<section class="margin-top-m margin-bottom-m">
+  <canvas #imgCanvas class="width-1-1"></canvas>
+</section>
