@@ -6,6 +6,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { UtilitiesModule } from 'src/app/modules/utilities/utilities.module';
 import { HomeComponent } from './components/home/home.component';
 import { FilterControlModule } from 'src/app/modules/filter-control/filter-control.module';
+import { ButtonModule } from 'src/app/modules/button/button.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -14,7 +15,8 @@ import { FilterControlModule } from 'src/app/modules/filter-control/filter-contr
     ReactiveFormsModule,
     HomeRoutingModule,
     UtilitiesModule,
-    FilterControlModule
+    FilterControlModule,
+    ButtonModule
   ]
 })
 export class HomeModule {}

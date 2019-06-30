@@ -2,8 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
 
-body {
+@mixin font-config {
   font-family: 'Ubuntu', sans-serif;
   line-height: 1.7;
   color: $color-text;
+}
+
+body {
+  @include font-config();
 }

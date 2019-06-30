@@ -1,0 +1,72 @@
+@import '../../../../../styles/abstracts/vars';
+@import '../../../../../styles/base/typography';
+
+// Normal button standards
+$button-min-width: $size-m !default;
+$button-padding: $size-xs $size-s !default;
+$button-border-radius: $size-xxs !default;
+
+// Round button standards
+$round-button-border-radius: 50% !default;
+$round-button-size: 40px !default;
+
+$button-overlay-opacity: 0.2;
+$button-overlay-transition: opacity 0.2s;
+$button-overlay-background: #fff;
+
+@mixin button-base {
+  @include font-config();
+  background-color: $color-primary;
+  border: none;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.app-button-overlay {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: $button-overlay-background;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &:hover {
+    opacity: $button-overlay-opacity;
+    transition: $button-overlay-transition;
+  }
+}
+
+.app-button {
+  @include button-base();
+  min-width: $button-min-width;
+  padding: $button-padding;
+  border-radius: $button-border-radius;
+
+  .app-button-overlay {
+    border-radius: $button-border-radius;
+  }
+}
+
+.app-round-button {
+  @include button-base();
+  border-radius: $round-button-border-radius;
+  width: $round-button-size;
+  height: $round-button-size;
+
+  .app-button-overlay {
+    border-radius: $round-button-border-radius;
+  }
+}
+
+:host(.app-button) {
+  @extend .app-button;
+}
+
+:host(.app-round-button) {
+  @extend .app-round-button;
+}
