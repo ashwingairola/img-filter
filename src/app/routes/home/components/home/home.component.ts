@@ -27,7 +27,11 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.fileCtrl = new FormControl();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.fileCtrl.valueChanges.subscribe(value => {
+      this.onFileSelect(value);
+    });
+  }
 
   ngAfterViewInit(): void {
     this.canvasContext = this.imgCanvas.nativeElement.getContext('2d');

@@ -1,0 +1,5 @@
+<section>
+  <button app-button (click)="openFileInput()">Select File</button>
+  <span *ngIf="fileName">{{ fileName }}</span>
+  <input type="file" hidden #fileInput (change)="onFileSelect($event)" />
+</section>

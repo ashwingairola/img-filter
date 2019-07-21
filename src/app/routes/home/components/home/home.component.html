@@ -1,9 +1,11 @@
 <h2>Select an image file</h2>
-<input
+<!-- <input
   type="file"
   [formControl]="fileCtrl"
   (change)="onFileSelect($event.target.files[0])"
-/>
+/> -->
+
+<app-file-input [formControl]="fileCtrl"></app-file-input>
 <ng-container *ngIf="image">
   <app-btn-change
     [value]="100"

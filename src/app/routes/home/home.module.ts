@@ -7,6 +7,7 @@ import { UtilitiesModule } from 'src/app/modules/utilities/utilities.module';
 import { HomeComponent } from './components/home/home.component';
 import { FilterControlModule } from 'src/app/modules/filter-control/filter-control.module';
 import { ButtonModule } from 'src/app/modules/button/button.module';
+import { FileInputModule } from 'src/app/modules/file-input/file-input.module';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -16,7 +17,8 @@ import { ButtonModule } from 'src/app/modules/button/button.module';
     HomeRoutingModule,
     UtilitiesModule,
     FilterControlModule,
-    ButtonModule
+    ButtonModule,
+    FileInputModule
   ]
 })
 export class HomeModule {}
