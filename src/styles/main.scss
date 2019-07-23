@@ -140,6 +140,16 @@
   width: 100%;
 }
 
+// Viewport height
+.vh-1-1 {
+  height: 100vh;
+}
+
+// Viewport width
+.vw-1-1 {
+  width: 100vh;
+}
+
 // Position
 .pos-relative {
   position: relative;
@@ -147,6 +157,10 @@
 
 .pos-absolute {
   position: absolute;
+}
+
+.pos-fixed {
+  position: fixed;
 }
 
 .stick-left {

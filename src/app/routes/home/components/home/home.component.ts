@@ -8,6 +8,7 @@ import {
 import { FormControl } from '@angular/forms';
 import { Filter } from 'src/app/picfx/types/filter.types';
 import { PicFX } from 'src/app/picfx/picfx';
+import { OverlayService } from 'src/app/modules/overlay/services/overlay.service';
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   picfx: PicFX;
   fileCtrl: FormControl;
 
-  constructor() {
+  constructor(private overlaySvc: OverlayService) {
     this.fileCtrl = new FormControl();
   }
 
@@ -71,4 +72,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   openFilterOptions() {}
+
+  openOverlay() {
+    this.overlaySvc.renderOverlay();
+  }
 }
