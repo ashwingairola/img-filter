@@ -140,6 +140,23 @@
   width: 100%;
 }
 
+// Position
+.pos-relative {
+  position: relative;
+}
+
+.pos-absolute {
+  position: absolute;
+}
+
+.stick-left {
+  left: 0;
+}
+
+.stick-right {
+  right: 0;
+}
+
 // z-index
 .z-topmost {
   z-index: 99;

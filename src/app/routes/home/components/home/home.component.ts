@@ -69,4 +69,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   onReset() {
     this.picfx.resetImgFilters(this.image);
   }
+
+  openFilterOptions() {}
 }

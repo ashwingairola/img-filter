@@ -4,3 +4,10 @@ canvas {
   border-radius: $size-xs;
   background-color: #aeaeae;
 }
+
+.floating-container {
+  position: fixed;
+  right: 0;
+  top: 90vh;
+  width: 100%;
+}
